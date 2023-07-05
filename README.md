@@ -50,3 +50,4 @@ Zdobyłam 10/14 punktów :sparkles:
 //*[@type='password']
 ```
 * ### _**SUBTASK 2: Dodawanie selektorów do projektu**_
+[login_page.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/login_page.py)

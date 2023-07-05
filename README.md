@@ -49,5 +49,11 @@ Zdobyłam 10/14 punktów :sparkles:
 //*[@name='password']
 //*[@type='password']
 ```
-* ### _**SUBTASK 2: Dodawanie selektorów do projektu**_
+* ### _**SUBTASK 3: Dodawanie selektorów do projektu**_
 [login_page.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/login_page.py)
+
+* ### _**SUBTASK 4: Dodanie nowego pliku: dashboard.py**_
+[dashboard.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/dashboard.py)
+
+* ### _**SUBTASK 5: Dodanie nowego pliku: add_a_match_form.py**_
+[add_a_match_form.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/add_a_match_form.py)

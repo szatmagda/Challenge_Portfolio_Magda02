@@ -49,3 +49,4 @@ Zdobyłam 10/14 punktów :sparkles:
 //*[@name='password']
 //*[@type='password']
 ```
+* ### _**SUBTASK 2: Dodawanie selektorów do projektu**_

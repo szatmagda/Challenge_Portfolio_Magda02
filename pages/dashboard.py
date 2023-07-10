@@ -14,9 +14,6 @@ class Dashboard(BasePage):
     Last_updated_match_button_xpath = "/html/body/div/div/main/div[3]/div[3]/div/div/a[4]/button"
     Last_updated_report_button_xpath = "/html/body/div/div/main/div[3]/div[3]/div/div/a[5]/button"
     Add_player_button_xpath = "//*[text()='Dodaj gracza']"
-
-
-class Dashboard2(BasePage):
     expected_title = 'Scouts panel'
     dashboard_url = 'https://scouts-test.futbolkolektyw.pl/'
 

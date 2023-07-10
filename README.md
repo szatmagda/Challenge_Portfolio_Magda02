@@ -49,6 +49,12 @@ Zdobyłam 10/14 punktów :sparkles:
 //*[@name='password']
 //*[@type='password']
 ```
+:crystal_ball: **7. Scouts_panel_xpath**
+```
+//h5
+//*[text()='Scouts Panel']
+//*[@id="__next"]/form/div/div[1]/h5
+```
 * ### _**SUBTASK 3: Dodawanie selektorów do projektu**_
 [login_page.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/login_page.py)
 

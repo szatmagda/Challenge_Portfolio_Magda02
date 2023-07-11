@@ -63,3 +63,17 @@ Zdobyłam 10/14 punktów :sparkles:
 
 * ### _**SUBTASK 5: Dodanie nowego pliku: add_a_match_form.py**_
 [add_a_match_form.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/add_a_match_form.py)
+
+## **TASK 3: Pierwszy test automatyczny i asserty** :white_check_mark:
+* ### _**SUBTASK 1: Uzupełnienie strony logowania**_
+[login_page.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/login_page.py)
+
+* ### _**SUBTASK 2: Nowy przypadek testowy**_
+[login_to_the_system.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/test_cases/login_to_the_system.py)
+
+* ### _**SUBTASK 3: Assert**_
+[dashboard.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/dashboard.py)
+
+* ### _**SUBTASK 4: Powtórzenie tego, co już wiemy**_
+[Add_a_Player.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/Add_a_Player.py)
+[Click_button_Add_a_player.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/test_cases/Click_button_Add_a_player.py)

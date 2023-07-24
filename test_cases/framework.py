@@ -1,6 +1,9 @@
 import os
+import time
 import unittest
 from selenium import webdriver
+
+from pages.login_page import LoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from selenium.webdriver.chrome.service import Service
 
@@ -49,3 +52,28 @@ class TestMediumPage(unittest.TestCase):
         self.driver.quit()
     # Element of the first task: Try to search the Internet yourself how to get rid of the error:
     # "DeprecationWarning: executable_path has been deprecated, please pass in a Service object"
+
+
+class test(unittest.TestCase):
+
+    @classmethod
+    def setUp(self):
+        os.chmod(DRIVER_PATH, 755)
+        self.driver_service = Service(executable_path=DRIVER_PATH)
+        self.driver = webdriver.Chrome(service=self.driver_service)
+        self.driver.get('https://scouts-test.futbolkolektyw.pl/en')
+        self.driver.fullscreen_window()
+        self.driver.implicitly_wait(IMPLICITLY_WAIT)
+
+    def test_change_language(self):
+        user_login = LoginPage(self.driver)
+        user_login.select_language("English")
+        time.sleep(3)
+        user_login.select_language("Polski")
+        time.sleep(3)
+
+    @classmethod
+    def tearDown(self):
+        self.driver.quit()
+
+

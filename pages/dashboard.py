@@ -1,22 +1,39 @@
-
 from pages.base_page import BasePage
 
 
 class Dashboard(BasePage):
-    Main_page_button_xpath = "/html/body/div/div/div/div/div/ul[1]/div[1]"
+    Logo_Scouts_Panel_xpath = "//div[@title='Logo Scouts Panel']"
+    Scouts_panel_header_xpath = "//h6[text()='Scouts Panel']"
+    Scouts_panel_header2_xpath = "//h2[text()='Scouts Panel']"
+    Scouts_panel_info_xpath = "//p"
+    Activity_xpath = "//div[3]/div/div/h2"
+    Shortcuts_xpath = "//*[text()='Linki pomocnicze']"
+    Created_player_xpath = "//div/div/h6[1]"
+    Updated_player_xpath = "//div/div/h6[2]"
+    Created_match_xpath = "//div/div/h6[3]"
+    Updated_match_xpath = "//div/div/h6[4]"
+    Updated_report_xpath = "//div/div/h6[5]"
+    Players_count_xpath = "//div[2]/div[1]/div/div[1]"
+    Players_count_number_xpath = "//div[1]/div/div[2]/b"
+    Matches_count_xpath = "//div[2]/div[2]/div/div[1]"
+    Matches_count_number_xpath = "//div[2]/div/div[2]/b"
+    Reports_count_xpath = "//div[2]/div[3]/div/div[1]"
+    Reports_count_number_xpath = "//div[3]/div/div[2]/b"
+    Events_count_xpath = "//div[2]/div[4]/div/div[1]"
+    Events_count_number_xpath = "//div[4]/div/div[2]/b"
+    Main_page_button_xpath = "//ul[1]/div[1]"
     Players_button_xpath = "//ul[1]/div[2]"
-    Polski_button_xpath = "/html/body/div/div/div/div/div/ul[2]/div[1]"
+    English_button_xpath = "//*[text()='English']"
     Sign_out_button_xpath = "//*[text()='Wyloguj']"
     Dev_team_contact_link_xpath = "//a[@tabindex='0']"
-    Last_created_player_button_xpath = "/html/body/div/div/main/div[3]/div[3]/div/div/a[1]/button"
-    Last_updated_player_button_xpath = "/html/body/div/div/main/div[3]/div[3]/div/div/a[2]/button"
-    Last_created_match_button_xpath = "/html/body/div/div/main/div[3]/div[3]/div/div/a[3]/button"
-    Last_updated_match_button_xpath = "/html/body/div/div/main/div[3]/div[3]/div/div/a[4]/button"
-    Last_updated_report_button_xpath = "/html/body/div/div/main/div[3]/div[3]/div/div/a[5]/button"
+    Last_created_player_button_xpath = "//div[3]/div/div/a[1]/button"
+    Last_updated_player_button_xpath = "//div[3]/div/div/a[2]/button"
+    Last_created_match_button_xpath = "//div[3]/div/div/a[3]/button"
+    Last_updated_match_button_xpath = "//div[3]/div/div/a[4]/button"
+    Last_updated_report_button_xpath = "//div[3]/div/div/a[5]/button"
     Add_player_button_xpath = "//*[text()='Dodaj gracza']"
     expected_title = 'Scouts panel'
     dashboard_url = 'https://scouts-test.futbolkolektyw.pl/'
-
 
     def title_of_page(self):
         self.wait_for_element_to_be_clicable(self.Add_player_button_xpath)

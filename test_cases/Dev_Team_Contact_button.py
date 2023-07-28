@@ -29,7 +29,6 @@ class TestDevTeamContact(unittest.TestCase):
         dev_team.click_Dev_Team_Contact_button()
         time.sleep(5)
 
-
     @classmethod
     def tearDown(self):
         self.driver.quit()

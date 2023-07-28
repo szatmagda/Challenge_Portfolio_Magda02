@@ -26,4 +26,3 @@ class DodajGracza(BasePage):
 
     def click_submit_button(self):
         self.click_on_the_element(self.Submit_button_xpath)
-

@@ -7,7 +7,6 @@ from pages.dashboard import Dashboard
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from pages.login_page import LoginPage
 from selenium.webdriver.chrome.service import Service
-from pages.base_page import BasePage
 
 
 class TestLoginPage(unittest.TestCase):

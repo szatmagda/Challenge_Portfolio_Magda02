@@ -75,5 +75,3 @@ class test(unittest.TestCase):
     @classmethod
     def tearDown(self):
         self.driver.quit()
-
-

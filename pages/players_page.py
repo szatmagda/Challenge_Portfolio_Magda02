@@ -18,4 +18,3 @@ class PlayersPage(BasePage):
 
     def wait_for_button(self):
         self.wait_for_element_to_be_clicable(self.Dodaj_mecz_button_xpath)
-

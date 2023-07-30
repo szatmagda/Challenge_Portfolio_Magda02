@@ -28,8 +28,10 @@ class TestLoginPage(unittest.TestCase):
         user_login.click_on_the_Sign_In_button()
         dashboard_page = Dashboard(self.driver)
         dashboard_page.title_of_page()
-        self.driver.save_screenshot("C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/login_to_the_system/success-login.png")
-        Image.open("C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/login_to_the_system/success-login.png").show()
+        self.driver.save_screenshot(
+            "C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/login_to_the_system/success-login.png")
+        Image.open(
+            "C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/login_to_the_system/success-login.png").show()
 
     @classmethod
     def tearDown(self):

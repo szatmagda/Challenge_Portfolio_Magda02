@@ -1,5 +1,4 @@
 import os
-import time
 import unittest
 
 from selenium import webdriver
@@ -7,6 +6,7 @@ from selenium import webdriver
 from pages.add_a_player import PlayerPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from selenium.webdriver.chrome.service import Service
+from PIL import Image
 
 
 class TestAddPlayer(unittest.TestCase):
@@ -17,6 +17,7 @@ class TestAddPlayer(unittest.TestCase):
         self.driver_service = Service(executable_path=DRIVER_PATH)
         self.driver = webdriver.Chrome(service=self.driver_service)
         self.driver.get('https://scouts-test.futbolkolektyw.pl/pl/login?redirected=true')
+        self.driver.maximize_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
     def test_click_Add_a_player_button(self):
@@ -27,6 +28,10 @@ class TestAddPlayer(unittest.TestCase):
         button_click.wait_for_logo()
         button_click.click_on_the_add_player_button()
         button_click.title_of_page()
+        self.driver.save_screenshot(
+            "C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/click_button_Add_a_player/Add-a-player-form.png")
+        Image.open(
+            "C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/click_button_Add_a_player/Add-a-player-form.png").show()
 
     @classmethod
     def tearDown(self):

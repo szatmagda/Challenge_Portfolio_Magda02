@@ -1,5 +1,4 @@
 import os
-import time
 import unittest
 
 from selenium import webdriver
@@ -18,7 +17,7 @@ class TestLoginPage(unittest.TestCase):
         self.driver_service = Service(executable_path=DRIVER_PATH)
         self.driver = webdriver.Chrome(service=self.driver_service)
         self.driver.get('https://scouts-test.futbolkolektyw.pl/pl/login?redirected=true')
-        self.driver.fullscreen_window()
+        self.driver.maximize_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
     def test_log_in_to_the_system(self):
@@ -29,9 +28,8 @@ class TestLoginPage(unittest.TestCase):
         user_login.click_on_the_Sign_In_button()
         dashboard_page = Dashboard(self.driver)
         dashboard_page.title_of_page()
-        self.driver.save_screenshot("C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/dashboard_page.png")
-        Image.open("C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/dashboard_page.png").show()
-        time.sleep(5)
+        self.driver.save_screenshot("C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/login_to_the_system/success-login.png")
+        Image.open("C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/login_to_the_system/success-login.png").show()
 
     @classmethod
     def tearDown(self):

@@ -38,7 +38,6 @@ class Dashboard(BasePage):
     EN_version_url = 'https://scouts-test.futbolkolektyw.pl/en'
     PL_version_url = 'https://scouts-test.futbolkolektyw.pl/pl'
 
-
     def title_of_page(self):
         self.wait_for_element_to_be_clicable(self.Add_player_button_xpath)
         assert self.get_page_title(self.dashboard_url) == self.expected_title

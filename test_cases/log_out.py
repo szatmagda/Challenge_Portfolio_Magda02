@@ -1,5 +1,4 @@
 import os
-import time
 import unittest
 
 from pages.add_a_player import PlayerPage
@@ -8,6 +7,7 @@ from pages.login_page import LoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from PIL import Image
 
 
 class TestWyloguj(unittest.TestCase):
@@ -18,6 +18,7 @@ class TestWyloguj(unittest.TestCase):
         self.driver_service = Service(executable_path=DRIVER_PATH)
         self.driver = webdriver.Chrome(service=self.driver_service)
         self.driver.get('https://scouts-test.futbolkolektyw.pl/pl/login?redirected=true')
+        self.driver.maximize_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
     def test_Wyloguj_button(self):
@@ -30,6 +31,10 @@ class TestWyloguj(unittest.TestCase):
         log_out.click_on_Wyloguj_button()
         user_login = LoginPage(self.driver)
         user_login.title_of_page()
+        self.driver.save_screenshot(
+            "C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/log_out/log-in-page.png")
+        Image.open(
+            "C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/log_out/log-in-page.png").show()
 
     @classmethod
     def tearDown(self):

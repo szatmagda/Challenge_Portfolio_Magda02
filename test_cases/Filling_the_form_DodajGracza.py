@@ -1,5 +1,4 @@
 import os
-import time
 import unittest
 
 from pages.add_a_player import PlayerPage
@@ -7,6 +6,7 @@ from pages.players_form import DodajGracza
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from PIL import Image
 
 
 class TestDodajGarczaForm(unittest.TestCase):
@@ -17,6 +17,7 @@ class TestDodajGarczaForm(unittest.TestCase):
         self.driver_service = Service(executable_path=DRIVER_PATH)
         self.driver = webdriver.Chrome(service=self.driver_service)
         self.driver.get('https://scouts-test.futbolkolektyw.pl/pl/login?redirected=true')
+        self.driver.maximize_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
     def test_filling_the_form_DodajGracza(self):
@@ -33,11 +34,13 @@ class TestDodajGarczaForm(unittest.TestCase):
         add_a_player.type_in_Data('2142002')
         add_a_player.type_in_Pozycja('Napastnik')
         add_a_player.click_submit_button()
-        self.driver.implicitly_wait(5)
-        add_a_player.click_strona_główna_button()
-        add_a_player.visible_new_player()
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollTop);")
+        add_a_player.player_added_title_of_the_page()
+        self.driver.save_screenshot(
+            "C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/Filling_the_form_DodajGracza/player-added.png")
+        Image.open(
+            "C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/Filling_the_form_DodajGracza/player-added.png").show()
 
     @classmethod
     def tearDown(self):
         self.driver.quit()
-

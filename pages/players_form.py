@@ -8,6 +8,12 @@ class DodajGracza(BasePage):
     Data_urodzenia_field_xpath = "//*[@name='age']"
     Główna_pozycja_xpath = "//*[@name='mainPosition']"
     Submit_button_xpath = "//*[@type='submit']"
+    Strona_główna_button_xpath = "//ul[1]/div[1]/div[2]/span"
+    New_player_name_xpath = "//span[text()='Jan Nowak']"
+    Player_form_url = "https://scouts-test.futbolkolektyw.pl/pl/players/64c53a78575dd1f94272a969/edit"
+    Expected_title = "Edycja gracza Jan Nowak"
+    Header_page_xpath = "//form/div[1]/div/span"
+    Notification_text_xpath = "//div[@role='alert']"
 
     def click_on_the_add_player_button(self):
         self.click_on_the_element(self.Add_a_player_button_xpath)
@@ -26,3 +32,15 @@ class DodajGracza(BasePage):
 
     def click_submit_button(self):
         self.click_on_the_element(self.Submit_button_xpath)
+
+    def click_strona_główna_button(self):
+        self.click_on_the_element(self.Strona_główna_button_xpath)
+
+    def visible_new_player(self):
+        self.wait_for_element_to_be_visible(self.New_player_name_xpath)
+
+    def wait_for_text(self):
+        self.wait_for_element_to_be_visible(self.Header_page_xpath)
+
+    def wait_for_notification(self):
+        self.wait_for_element_to_be_visible(self.Notification_text_xpath)

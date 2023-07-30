@@ -2,12 +2,12 @@ import unittest
 
 from unittest.loader import makeSuite
 
-from test_cases.Dev_Team_Contact_button import TestDevTeamContact
+from test_cases.page_translation import TestDevTeamContact
 from test_cases.Filling_the_form_DodajGracza import TestDodajGarczaForm
-from test_cases.Log_out import TestWyloguj
-from test_cases.Players_info import TestEditForm, TestMeczeButton
+from test_cases.log_out import TestWyloguj
+from test_cases.players_info import TestEditForm, TestMeczeButton
 from test_cases.framework import Test
-from test_cases.Click_button_Add_a_player import TestAddPlayer
+from test_cases.click_button_Add_a_player import TestAddPlayer
 from test_cases.login_to_the_system import TestLoginPage
 
 

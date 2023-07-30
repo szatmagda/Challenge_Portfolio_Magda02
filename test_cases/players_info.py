@@ -1,9 +1,8 @@
 import os
-import time
 import unittest
 
-from pages.Players_form import DodajGracza
-from pages.Players_page import PlayersPage
+from pages.players_form import DodajGracza
+from pages.players_page import PlayersPage
 from pages.dashboard import Dashboard
 from pages.login_page import LoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
@@ -26,17 +25,17 @@ class TestEditForm(unittest.TestCase):
         button_click.type_in_email('user02@getnada.com')
         button_click.type_in_password('Test-1234')
         button_click.click_on_the_Sign_In_button()
-        time.sleep(2)
+        button_click.wait_for_logo()
         players_click = Dashboard(self.driver)
         players_click.click_Gracze_button()
-        time.sleep(4)
         players_page = PlayersPage(self.driver)
+        players_page.wait_for_icon()
         players_page.click_first_player()
-        time.sleep(2)
         editing_page = DodajGracza(self.driver)
+        editing_page.wait_for_text()
         editing_page.type_in_Imię('zzz')
         editing_page.click_submit_button()
-        time.sleep(4)
+        editing_page.wait_for_notification()
 
     @classmethod
     def tearDown(self):
@@ -58,15 +57,13 @@ class TestMeczeButton(unittest.TestCase):
         button_click.type_in_email('user02@getnada.com')
         button_click.type_in_password('Test-1234')
         button_click.click_on_the_Sign_In_button()
-        time.sleep(2)
+        button_click.wait_for_logo()
         players_click = Dashboard(self.driver)
         players_click.click_Gracze_button()
-        time.sleep(4)
         players_page = PlayersPage(self.driver)
         players_page.click_first_player()
-        time.sleep(2)
         players_page.click_Mecze_button()
-        time.sleep(4)
+        players_page.wait_for_button()
 
     @classmethod
     def tearDown(self):

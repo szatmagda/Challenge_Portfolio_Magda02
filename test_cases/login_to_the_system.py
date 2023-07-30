@@ -7,6 +7,7 @@ from pages.dashboard import Dashboard
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from pages.login_page import LoginPage
 from selenium.webdriver.chrome.service import Service
+from PIL import Image
 
 
 class TestLoginPage(unittest.TestCase):
@@ -28,6 +29,8 @@ class TestLoginPage(unittest.TestCase):
         user_login.click_on_the_Sign_In_button()
         dashboard_page = Dashboard(self.driver)
         dashboard_page.title_of_page()
+        self.driver.save_screenshot("C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/dashboard_page.png")
+        Image.open("C:/Users/Magda/Documents/GitHub/Challenge_Portfolio_Magda02/test_cases/Screenshots/dashboard_page.png").show()
         time.sleep(5)
 
     @classmethod

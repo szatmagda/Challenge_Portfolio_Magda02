@@ -4,7 +4,7 @@ import unittest
 
 from selenium import webdriver
 
-from pages.Add_a_Player import PlayerPage
+from pages.add_a_player import PlayerPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 from selenium.webdriver.chrome.service import Service
 
@@ -24,10 +24,9 @@ class TestAddPlayer(unittest.TestCase):
         button_click.type_in_email('user02@getnada.com')
         button_click.type_in_password('Test-1234')
         button_click.click_on_the_Sign_In_button()
-        time.sleep(3)
+        button_click.wait_for_logo()
         button_click.click_on_the_add_player_button()
         button_click.title_of_page()
-        time.sleep(3)
 
     @classmethod
     def tearDown(self):

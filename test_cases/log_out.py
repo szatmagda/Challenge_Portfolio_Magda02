@@ -2,7 +2,7 @@ import os
 import time
 import unittest
 
-from pages.Add_a_Player import PlayerPage
+from pages.add_a_player import PlayerPage
 from pages.dashboard import Dashboard
 from pages.login_page import LoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
@@ -25,13 +25,11 @@ class TestWyloguj(unittest.TestCase):
         button_click.type_in_email('user02@getnada.com')
         button_click.type_in_password('Test-1234')
         button_click.click_on_the_Sign_In_button()
-        time.sleep(2)
         log_out = Dashboard(self.driver)
+        log_out.wait_for_logo()
         log_out.click_on_Wyloguj_button()
-        time.sleep(2)
         user_login = LoginPage(self.driver)
         user_login.title_of_page()
-        time.sleep(4)
 
     @classmethod
     def tearDown(self):

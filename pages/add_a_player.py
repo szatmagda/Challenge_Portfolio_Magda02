@@ -8,6 +8,8 @@ class PlayerPage(BasePage):
     login_field_xpath = "//*[@id='login']"
     password_field_xpath = "//*[@id='password']"
     sign_in_button_xpath = "//*[@type='submit']"
+    Scouts_panel_logo_xpath = "//div[@title='Logo Scouts Panel']"
+    Header_xpath = "//form/div[1]/div/span"
 
     def click_on_the_add_player_button(self):
         self.click_on_the_element(self.Add_a_player_button_xpath)
@@ -23,3 +25,9 @@ class PlayerPage(BasePage):
 
     def click_on_the_Sign_In_button(self):
         self.click_on_the_element(self.sign_in_button_xpath)
+
+    def wait_for_logo(self):
+        self.wait_for_element_to_be_visible(self.Scouts_panel_logo_xpath)
+
+    def wait_for_header(self):
+        self.wait_for_element_to_be_visible(self.Header_xpath)

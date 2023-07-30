@@ -11,6 +11,7 @@ class LoginPage(BasePage):
     English_button_xpath = "//li[@tabindex='-1']"
     expected_title = "Scouts panel - zaloguj"
     login_url = 'https://scouts-test.futbolkolektyw.pl/pl/login?redirected=true'
+    Logo_Scouts_Panel_xpath = "//div[@title='Logo Scouts Panel']"
 
     def type_in_email(self, email):
         self.field_send_keys(self.login_field_xpath, email)
@@ -23,6 +24,9 @@ class LoginPage(BasePage):
 
     def title_of_page(self):
         assert self.get_page_title(self.login_url) == self.expected_title
+
+    def wait_for_logo(self):
+        self.wait_for_element_to_be_visible(self.Logo_Scouts_Panel_xpath)
 
     def select_language(self, language):
         self.click_on_the_element(self.language_list_xpath)

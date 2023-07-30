@@ -24,6 +24,7 @@ class Dashboard(BasePage):
     Main_page_button_xpath = "//ul[1]/div[1]"
     Players_button_xpath = "//ul[1]/div[2]"
     English_button_xpath = "//*[text()='English']"
+    Polish_button_xpath = "//*[text()='Polski']"
     Sign_out_button_xpath = "//*[text()='Wyloguj']"
     Dev_team_contact_link_xpath = "//a[@tabindex='0']"
     Last_created_player_button_xpath = "//div[3]/div/div/a[1]/button"
@@ -34,6 +35,9 @@ class Dashboard(BasePage):
     Add_player_button_xpath = "//*[text()='Dodaj gracza']"
     expected_title = 'Scouts panel'
     dashboard_url = 'https://scouts-test.futbolkolektyw.pl/'
+    EN_version_url = 'https://scouts-test.futbolkolektyw.pl/en'
+    PL_version_url = 'https://scouts-test.futbolkolektyw.pl/pl'
+
 
     def title_of_page(self):
         self.wait_for_element_to_be_clicable(self.Add_player_button_xpath)
@@ -47,3 +51,20 @@ class Dashboard(BasePage):
 
     def click_Gracze_button(self):
         self.click_on_the_element(self.Players_button_xpath)
+
+    def wait_for_logo(self):
+        self.wait_for_element_to_be_visible(self.Logo_Scouts_Panel_xpath)
+
+    def change_language_EN(self):
+        self.click_on_the_element(self.English_button_xpath)
+
+    def change_language_PL(self):
+        self.click_on_the_element(self.Polish_button_xpath)
+
+    def EN_url(self):
+        self.wait_for_element_to_be_clicable(self.Add_player_button_xpath)
+        assert self.get_page_title(self.EN_version_url) == self.expected_title
+
+    def PL_url(self):
+        self.wait_for_element_to_be_clicable(self.Add_player_button_xpath)
+        assert self.get_page_title(self.PL_version_url) == self.expected_title

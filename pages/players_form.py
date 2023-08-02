@@ -10,7 +10,7 @@ class DodajGracza(BasePage):
     Submit_button_xpath = "//*[@type='submit']"
     Strona_główna_button_xpath = "//ul[1]/div[1]/div[2]/span"
     New_player_name_xpath = "//span[text()='Jan Nowak']"
-    Player_form_url = "https://scouts-test.futbolkolektyw.pl/pl/players/64c53a78575dd1f94272a969/edit"
+    Player_form_url = "https://dareit.futbolkolektyw.pl/players/64c7fc70575dd1f94272a9f7/edit"
     Expected_title = "Edycja gracza Jan Nowak"
     Header_page_xpath = "//form/div[1]/div/span"
     Notification_box_xpath = "//*[@role='alert']"

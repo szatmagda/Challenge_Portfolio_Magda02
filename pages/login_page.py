@@ -10,7 +10,7 @@ class LoginPage(BasePage):
     Polski_button_xpath = "//li[@tabindex='0']"
     English_button_xpath = "//li[@tabindex='-1']"
     expected_title = "Scouts panel - zaloguj"
-    login_url = 'https://scouts-test.futbolkolektyw.pl/pl/login?redirected=true'
+    login_url = 'https://dareit.futbolkolektyw.pl/login'
     Logo_Scouts_Panel_xpath = "//div[@title='Logo Scouts Panel']"
 
     def type_in_email(self, email):

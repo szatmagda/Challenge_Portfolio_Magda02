@@ -4,7 +4,7 @@ from pages.base_page import BasePage
 class PlayerPage(BasePage):
     Add_a_player_button_xpath = "//*[text()='Dodaj gracza']"
     expected_title = "Dodaj gracza"
-    Player_form_url = "https://scouts-test.futbolkolektyw.pl/pl/players/add"
+    Player_form_url = "https://dareit.futbolkolektyw.pl/pl/players/add"
     login_field_xpath = "//*[@id='login']"
     password_field_xpath = "//*[@id='password']"
     sign_in_button_xpath = "//*[@type='submit']"

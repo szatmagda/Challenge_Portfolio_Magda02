@@ -56,25 +56,54 @@ Zdobyłam 10/14 punktów :sparkles:
 //*[@id="__next"]/form/div/div[1]/h5
 ```
 * ### _**SUBTASK 3: Dodawanie selektorów do projektu**_
-[login_page.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/login_page.py)
+:pushpin: [Github - login_page.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/login_page.py)
 
 * ### _**SUBTASK 4: Dodanie nowego pliku: dashboard.py**_
-[dashboard.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/dashboard.py)
+:pushpin: [Github - dashboard.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/dashboard.py)
 
 * ### _**SUBTASK 5: Dodanie nowego pliku: add_a_match_form.py**_
-[add_a_match_form.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/add_a_match_form.py)
+:pushpin: [Github - add_a_match_form.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/add_a_match_form.py)
+
 
 ## **TASK 3: Pierwszy test automatyczny i asserty** :white_check_mark:
 * ### _**SUBTASK 1: Uzupełnienie strony logowania**_
-[login_page.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/login_page.py)
+:pushpin: [Github - login_page.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/login_page.py)
 
 * ### _**SUBTASK 2: Nowy przypadek testowy**_
-[login_to_the_system.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/test_cases/login_to_the_system.py)
+:pushpin: [Github - login_to_the_system.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/test_cases/login_to_the_system.py)
 
 * ### _**SUBTASK 3: Assert**_
-[dashboard.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/dashboard.py)
+:pushpin: [Github - dashboard.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/dashboard.py)
 
 * ### _**SUBTASK 4: Powtórzenie tego, co już wiemy**_
-[Add_a_Player.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/Add_a_Player.py)
+:pushpin: [Github - Add_a_Player.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/pages/Add_a_Player.py)
 
-[Click_button_Add_a_player.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/test_cases/Click_button_Add_a_player.py)
+:pushpin: [Github - Click_button_Add_a_player.py](https://github.com/szatmagda/Challenge_Portfolio_Magda02/blob/main/test_cases/Click_button_Add_a_player.py)
+
+
+## **TASK 4: Refactor, debugger i przypadki testowe** :white_check_mark:
+* ### _**SUBTASK 1: Pisanie przypadków testowych**_
+:pushpin: [Dokument Google](https://docs.google.com/document/d/1HcBOUmrJ6ur9QdIFvkOfYjGST9SOmSs_GX4zfR_IR0o/edit)
+
+* ### _**SUBTASK 3: Dodanie nagrań z uruchomionych testów na dysk google**_
+:pushpin: [Nagrania](https://drive.google.com/drive/u/0/folders/1McTI1ooI3TGl6BeZLEPPN0IwdRjLA37_)
+
+
+## **TASK 5: Robot Framework** :white_check_mark:
+* ### _**SUBTASK 1: Robot framework**_
+:pushpin: [Nowe repozytorium Robot Framework](https://github.com/szatmagda/panelscout2_robotframework)
+
+
+## **TASK 6: Zgłaszanie błędów i raport z testów** :white_check_mark:
+* ### _**SUBTASK 2: Zgłaszanie błędów**_
+:pushpin: [Zgłaszanie błędów](https://docs.google.com/document/d/1ifbGkMJvOpOGP0DunDPu3HVUlm6SY8GspELcyn942N4/edit)
+
+:pushpin: [Zgłaszanie błędów - Robot Framework](https://docs.google.com/document/d/1t8YV0mOK9LCd1l9cjVw2Vmog5RFFr1VY-2r2rm8F1ts/edit)
+
+* ### _**SUBTASK 3: Raport z testów**_
+:pushpin: [Raport z testów](https://docs.google.com/document/d/1WY1VrhugubmjxzJBcCwkTngQxYtWPeKAJMPYVs98mhk/edit)
+
+:pushpin: [Raport z testów - Robot Framework](https://docs.google.com/document/d/1l6FEb3bJbKmSzovZrzpo2zP85qMP_stPelJmbU9XcUk/edit)
+
+* ### _**SUBTASK 4: Stwórz portfolio**_
+:pushpin: [Moje portfolio](https://github.com/szatmagda/Portfolio)

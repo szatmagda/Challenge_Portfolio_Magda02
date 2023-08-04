@@ -11,6 +11,7 @@ Zdobyłam 10/14 punktów :sparkles:
 
 
 ## **TASK 2: Selektory** :white_check_mark:
+:exclamation: Testy wykonywane są na wersji polskiej strony :exclamation:
 * ### _**SUBTASK 2: Wyszukiwanie selektorów na stronie logowania**_
 
 :crystal_ball: **1. remind_password_hyperlink_xpath**
